@@ -47,12 +47,6 @@ The `reverse_k*.json` files contain shape-Wilf classes for the corresponding `S_
 
 If you want all ordinary Wilf classes from a partial shape-Wilf dataset, use `--complete-all-permutations`. This adds every missing permutation in `S_k` as a singleton vertex before taking D8 components. For `reverse_k7.json`, this is necessary to recover all classes in `wilf.txt`; without it, the script only recovers the 74 Wilf classes touched by the partial input universe.
 
-Known examples:
-
-- `reverse_k5.json` has 119 patterns and default D8 completion adds `23451`.
-- `reverse_k7.json` has 322 patterns; default D8 completion reaches 1142 patterns and 74 generated classes, while `--complete-all-permutations` reaches all 5040 patterns and 595 classes.
-- `reverse_k8.json` has 40319 patterns and default D8 completion adds `23456781`.
-
 ## Quick start
 
 Generate the S5 closure and compare against the included ordinary Wilf table:
