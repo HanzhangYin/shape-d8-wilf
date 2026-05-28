@@ -19,6 +19,13 @@ class D8OperationTests(unittest.TestCase):
 
 
 class GenerationTests(unittest.TestCase):
+    def test_bundled_reverse_data_starts_at_k5(self):
+        bundled = sorted(path.name for path in DATA.glob("reverse_k*.json"))
+        self.assertEqual(
+            bundled,
+            ["reverse_k5.json", "reverse_k6.json", "reverse_k7.json", "reverse_k8.json"],
+        )
+
     def test_k5_generation_matches_expected_summary(self):
         k, classes, _ = d8.load_shape_classes(DATA / "reverse_k5.json")
         self.assertEqual(k, 5)
@@ -58,7 +65,7 @@ class GenerationTests(unittest.TestCase):
             json_out = tmp_path / "out.json"
             txt_out = tmp_path / "out.txt"
             rc = d8.main_args([
-                "--input", str(DATA / "reverse_k3.json"),
+                "--input", str(DATA / "reverse_k5.json"),
                 "--output-json", str(json_out),
                 "--output-txt", str(txt_out),
             ])
@@ -66,8 +73,9 @@ class GenerationTests(unittest.TestCase):
             self.assertTrue(json_out.exists())
             self.assertTrue(txt_out.exists())
             report = json.loads(json_out.read_text())
-            self.assertEqual(report["k"], 3)
-            self.assertEqual(report["completed_pattern_count"], 6)
+            self.assertEqual(report["k"], 5)
+            self.assertEqual(report["completed_pattern_count"], 120)
+            self.assertEqual(report["generated_class_count"], 16)
 
 
 if __name__ == "__main__":

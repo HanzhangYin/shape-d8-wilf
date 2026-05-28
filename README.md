@@ -35,13 +35,13 @@ Important caveat: the script does not prove that different generated components 
 
 The `data/` directory contains:
 
-- `reverse_k3.json`
-- `reverse_k4.json`
 - `reverse_k5.json`
 - `reverse_k6.json`
 - `reverse_k7.json`
 - `reverse_k8.json`
 - `wilf.txt`
+
+The smaller `reverse_k3.json` and `reverse_k4.json` files are intentionally not bundled. The repository starts its bundled reverse-data examples at `k=5`.
 
 The `reverse_k*.json` files contain shape-Wilf classes for the corresponding `S_k` datasets. Some files may omit D8 images that are singleton shape-Wilf classes. By default, the script completes the universe under D8 by adding missing D8 images as singleton shape-Wilf classes.
 
@@ -87,7 +87,7 @@ size distribution: {2: 29, 4: 260, 8: 4094, 12: 10, 16: 309, 18: 1, 20: 1, 24: 3
 
 ```bash
 mkdir -p outputs
-for k in 3 4 5 6 7 8; do
+for k in 5 6 7 8; do
   python3 generate_wilf_from_shape_d8.py \
     --input data/reverse_k${k}.json \
     --output-json outputs/generated_wilf_k${k}_from_shape_d8.json \
@@ -118,9 +118,9 @@ python3 -m unittest discover -s tests
 ## File layout
 
 ```text
-shape-d8-wilf-closure/
+shape-d8-wilf/
   generate_wilf_from_shape_d8.py   # main script
-  data/                            # bundled input data
+  data/                            # bundled input data for k=5,6,7,8
   tests/                           # lightweight tests
   examples/                        # optional example notes/scripts
   README.md
