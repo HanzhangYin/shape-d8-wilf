@@ -17,6 +17,7 @@ import argparse
 import json
 import re
 from collections import Counter, deque
+from itertools import permutations
 from pathlib import Path
 from typing import Iterable
 
@@ -112,6 +113,41 @@ def complete_d8_images(
     for p in sorted(missing):
         completed.append({p})
     return completed, sorted(missing)
+
+
+def complete_all_permutations(
+    classes: list[set[tuple[int, ...]]],
+    k: int,
+) -> tuple[list[set[tuple[int, ...]]], list[tuple[int, ...]]]:
+    """Add every missing S_k permutation as a singleton class."""
+    all_patterns = set().union(*classes) if classes else set()
+    universe = set(permutations(range(1, k + 1)))
+    missing = sorted(universe - all_patterns)
+    completed = [set(c) for c in classes]
+    for p in missing:
+        completed.append({p})
+    return completed, missing
+
+
+def complete_classes(
+    classes: list[set[tuple[int, ...]]],
+    *,
+    k: int,
+    complete_d8_images: bool = True,
+    complete_all_permutations: bool = False,
+) -> tuple[list[set[tuple[int, ...]]], list[tuple[int, ...]]]:
+    """Complete input classes by adding singleton classes for missing patterns.
+
+    By default this only adds missing D8 images of the input universe.  With
+    complete_all_permutations=True, it instead completes to all of S_k, which
+    is useful when a partial shape-Wilf dataset should generate every ordinary
+    Wilf class, including pure D8-orbit classes outside the input universe.
+    """
+    if complete_all_permutations:
+        return globals()["complete_all_permutations"](classes, k)
+    if complete_d8_images:
+        return globals()["complete_d8_images"](classes)
+    return [set(c) for c in classes], []
 
 
 def build_components(classes: list[set[tuple[int, ...]]]) -> list[dict]:
@@ -313,6 +349,15 @@ def main_args(argv: list[str] | None = None) -> int:
         help="do not add missing D8 images as singleton classes",
     )
     parser.add_argument(
+        "--complete-all-permutations",
+        action="store_true",
+        help=(
+            "add every missing S_k permutation as a singleton class before D8 closure; "
+            "use this for partial shape-Wilf datasets when you want all ordinary "
+            "Wilf classes, including pure D8-orbit classes outside the input universe"
+        ),
+    )
+    parser.add_argument(
         "--check-wilf",
         type=Path,
         help="optional wilf.txt file to compare against after generation",
@@ -329,11 +374,12 @@ def main_args(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     k, shape_classes, _ = load_shape_classes(args.input)
-    if args.no_complete_d8_images:
-        completed_classes = [set(c) for c in shape_classes]
-        added_singletons: list[tuple[int, ...]] = []
-    else:
-        completed_classes, added_singletons = complete_d8_images(shape_classes)
+    completed_classes, added_singletons = complete_classes(
+        shape_classes,
+        k=k,
+        complete_d8_images=not args.no_complete_d8_images,
+        complete_all_permutations=args.complete_all_permutations,
+    )
 
     components = build_components(completed_classes)
     report = make_report(

@@ -28,29 +28,15 @@ class GenerationTests(unittest.TestCase):
             ["reverse_k5.json", "reverse_k6.json", "reverse_k7.json", "reverse_k8.json"],
         )
 
-    def test_k5_generation_matches_expected_summary(self):
-        k, classes, _ = d8.load_shape_classes(DATA / "reverse_k5.json")
-        self.assertEqual(k, 5)
-        completed, added = d8.complete_d8_images(classes)
-        self.assertEqual([d8.format_pattern(p) for p in added], ["23451"])
-        components = d8.build_components(completed)
-        report = d8.make_report(
-            source=DATA / "reverse_k5.json",
-            k=k,
-            original_classes=classes,
-            completed_classes=completed,
-            added_singletons=added,
-            components=components,
-        )
-        self.assertEqual(report["input_pattern_count"], 119)
-        self.assertEqual(report["completed_pattern_count"], 120)
-        self.assertEqual(report["generated_class_count"], 16)
-        self.assertEqual(report["generated_size_distribution"], {2: 2, 4: 4, 8: 8, 16: 1, 20: 1})
-
-    def _generate_report(self, k_value):
+    def _generate_report(self, k_value, *, complete_all_permutations=False):
         source = DATA / f"reverse_k{k_value}.json"
         k, classes, _ = d8.load_shape_classes(source)
-        completed, added = d8.complete_d8_images(classes)
+        completed, added = d8.complete_classes(
+            classes,
+            k=k,
+            complete_d8_images=True,
+            complete_all_permutations=complete_all_permutations,
+        )
         return d8.make_report(
             source=source,
             k=k,
@@ -59,6 +45,14 @@ class GenerationTests(unittest.TestCase):
             added_singletons=added,
             components=d8.build_components(completed),
         )
+
+    def test_k5_generation_matches_expected_summary(self):
+        report = self._generate_report(5)
+        self.assertEqual(report["input_pattern_count"], 119)
+        self.assertEqual(report["completed_pattern_count"], 120)
+        self.assertEqual(report["d8_added_singletons"], ["23451"])
+        self.assertEqual(report["generated_class_count"], 16)
+        self.assertEqual(report["generated_size_distribution"], {2: 2, 4: 4, 8: 8, 16: 1, 20: 1})
 
     def test_k5_matches_bundled_wilf_table(self):
         report = self._generate_report(5)
@@ -77,8 +71,14 @@ class GenerationTests(unittest.TestCase):
         self.assertEqual(generated, intersected_expected)
         self.assertNotEqual(generated, expected)
 
+    def test_k7_complete_all_permutations_matches_bundled_wilf_table(self):
+        report = self._generate_report(7, complete_all_permutations=True)
+        self.assertEqual(report["completed_pattern_count"], 5040)
+        self.assertEqual(report["generated_class_count"], 595)
+        ok, lines = d8.compare_with_wilf_txt(report, DATA / "wilf.txt")
+        self.assertTrue(ok, "\n".join(lines))
 
-    def test_k7_check_wilf_can_accept_intersected_universe_match(self):
+    def test_k7_cli_complete_all_permutations_check_wilf_succeeds(self):
         with tempfile.TemporaryDirectory() as tmp:
             tmp_path = Path(tmp)
             json_out = tmp_path / "k7.json"
@@ -88,12 +88,13 @@ class GenerationTests(unittest.TestCase):
                     "--input", str(DATA / "reverse_k7.json"),
                     "--output-json", str(json_out),
                     "--output-txt", str(txt_out),
+                    "--complete-all-permutations",
                     "--check-wilf", str(DATA / "wilf.txt"),
-                    "--allow-intersected-wilf-match",
                 ])
             self.assertEqual(rc, 0)
             report = json.loads(json_out.read_text())
-            self.assertEqual(report["generated_class_count"], 74)
+            self.assertEqual(report["completed_pattern_count"], 5040)
+            self.assertEqual(report["generated_class_count"], 595)
 
     def test_cli_writes_outputs(self):
         with tempfile.TemporaryDirectory() as tmp:
