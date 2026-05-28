@@ -1,0 +1,2726 @@
+{
+  "k": 6,
+  "n_list": [7, 8, 9, 10, 11, 12],
+  "record_classes": [
+    {
+      "size": 4,
+      "patterns": ["432165", "321465", "213465", "123465"]
+    },
+    {
+      "size": 5,
+      "patterns": ["543216", "432156", "321456", "213456", "123456"]
+    },
+    {
+      "size": 3,
+      "patterns": ["321654", "213654", "123654"]
+    },
+    {
+      "size": 3,
+      "patterns": ["321564", "213564", "123564"]
+    },
+    {
+      "size": 3,
+      "patterns": ["321645", "213645", "123645"]
+    },
+    {
+      "size": 3,
+      "patterns": ["321546", "213546", "123546"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216543", "126543"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215643", "125643"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216453", "126453"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214653", "124653"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215463", "125463"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214563", "124563"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216534", "126534"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215634", "125634"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216354", "126354"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231654", "312654"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215364", "125364"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231564", "312564"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216435", "126435"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214635", "124635"]
+    },
+    {
+      "size": 2,
+      "patterns": ["216345", "126345"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231645", "312645"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214365", "124365"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231465", "312465"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215436", "125436"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214536", "124536"]
+    },
+    {
+      "size": 2,
+      "patterns": ["215346", "125346"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231546", "312546"]
+    },
+    {
+      "size": 2,
+      "patterns": ["214356", "124356"]
+    },
+    {
+      "size": 2,
+      "patterns": ["231456", "312456"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456321"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356421"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346521"]
+    },
+    {
+      "size": 1,
+      "patterns": ["543621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345621"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456231"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256431"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246531"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245631"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356241"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256341"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236541"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235641"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346251"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246351"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236451"]
+    },
+    {
+      "size": 1,
+      "patterns": ["432651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["234651"]
+    },
+    {
+      "size": 1,
+      "patterns": ["543261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345261"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245361"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235461"]
+    },
+    {
+      "size": 1,
+      "patterns": ["432561"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342561"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423561"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243561"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324561"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456312"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356412"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346512"]
+    },
+    {
+      "size": 1,
+      "patterns": ["543612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345612"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456132"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156432"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146532"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145632"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356142"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156342"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136542"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135642"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346152"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146352"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136452"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134652"]
+    },
+    {
+      "size": 1,
+      "patterns": ["543162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345162"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145362"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135462"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134562"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456213"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256413"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246513"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245613"]
+    },
+    {
+      "size": 1,
+      "patterns": ["654123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["564123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["645123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["465123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["546123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["456123"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156423"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146523"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145623"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256143"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156243"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621543"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261543"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612543"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162543"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521643"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251643"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512643"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152643"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246153"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146253"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621453"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261453"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612453"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162453"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421653"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241653"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412653"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142653"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245163"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145263"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521463"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251463"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512463"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152463"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421563"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241563"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412563"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142563"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356214"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256314"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236514"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235614"]
+    },
+    {
+      "size": 1,
+      "patterns": ["653124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["563124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["635124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["365124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["536124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["356124"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156324"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136524"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135624"]
+    },
+    {
+      "size": 1,
+      "patterns": ["652134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["562134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["625134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["265134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["526134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["256134"]
+    },
+    {
+      "size": 1,
+      "patterns": ["651234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["561234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["615234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["165234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["516234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["156234"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621534"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261534"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612534"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162534"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521634"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251634"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512634"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152634"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236154"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136254"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621354"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261354"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612354"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162354"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132654"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235164"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135264"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521364"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251364"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512364"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152364"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132564"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346215"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246315"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236415"]
+    },
+    {
+      "size": 1,
+      "patterns": ["432615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["234615"]
+    },
+    {
+      "size": 1,
+      "patterns": ["643125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["463125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["634125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["364125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["436125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["346125"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146325"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136425"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134625"]
+    },
+    {
+      "size": 1,
+      "patterns": ["642135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["462135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["624135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["264135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["426135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["246135"]
+    },
+    {
+      "size": 1,
+      "patterns": ["641235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["461235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["614235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["164235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["416235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["146235"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621435"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261435"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612435"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162435"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421635"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241635"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412635"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142635"]
+    },
+    {
+      "size": 1,
+      "patterns": ["632145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["362145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["623145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["263145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["326145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["236145"]
+    },
+    {
+      "size": 1,
+      "patterns": ["631245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["361245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["613245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["163245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["316245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["136245"]
+    },
+    {
+      "size": 1,
+      "patterns": ["621345"]
+    },
+    {
+      "size": 1,
+      "patterns": ["261345"]
+    },
+    {
+      "size": 1,
+      "patterns": ["612345"]
+    },
+    {
+      "size": 1,
+      "patterns": ["162345"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132645"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342165"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423165"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243165"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324165"]
+    },
+    {
+      "size": 1,
+      "patterns": ["234165"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134265"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421365"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241365"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412365"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142365"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132465"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453216"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534216"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354216"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435216"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345216"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245316"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235416"]
+    },
+    {
+      "size": 1,
+      "patterns": ["432516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["234516"]
+    },
+    {
+      "size": 1,
+      "patterns": ["543126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["453126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["534126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["354126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["435126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["345126"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145326"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135426"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134526"]
+    },
+    {
+      "size": 1,
+      "patterns": ["542136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["452136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["524136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["254136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["425136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["245136"]
+    },
+    {
+      "size": 1,
+      "patterns": ["541236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["451236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["514236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["154236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["415236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["145236"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521436"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251436"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512436"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152436"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421536"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241536"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412536"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142536"]
+    },
+    {
+      "size": 1,
+      "patterns": ["532146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["352146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["523146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["253146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["325146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["235146"]
+    },
+    {
+      "size": 1,
+      "patterns": ["531246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["351246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["513246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["153246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["315246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["135246"]
+    },
+    {
+      "size": 1,
+      "patterns": ["521346"]
+    },
+    {
+      "size": 1,
+      "patterns": ["251346"]
+    },
+    {
+      "size": 1,
+      "patterns": ["512346"]
+    },
+    {
+      "size": 1,
+      "patterns": ["152346"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132546"]
+    },
+    {
+      "size": 1,
+      "patterns": ["342156"]
+    },
+    {
+      "size": 1,
+      "patterns": ["423156"]
+    },
+    {
+      "size": 1,
+      "patterns": ["243156"]
+    },
+    {
+      "size": 1,
+      "patterns": ["324156"]
+    },
+    {
+      "size": 1,
+      "patterns": ["234156"]
+    },
+    {
+      "size": 1,
+      "patterns": ["431256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["341256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["413256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["143256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["314256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["134256"]
+    },
+    {
+      "size": 1,
+      "patterns": ["421356"]
+    },
+    {
+      "size": 1,
+      "patterns": ["241356"]
+    },
+    {
+      "size": 1,
+      "patterns": ["412356"]
+    },
+    {
+      "size": 1,
+      "patterns": ["142356"]
+    },
+    {
+      "size": 1,
+      "patterns": ["132456"]
+    }
+  ]
+}
