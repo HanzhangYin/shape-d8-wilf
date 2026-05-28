@@ -255,10 +255,29 @@ def compare_with_wilf_txt(report: dict, wilf_path: Path) -> tuple[bool, list[str
         + str(dict(sorted(Counter(len(c) for c in generated).items())))
     )
     ok = expected == generated
+    generated_patterns = {pattern for cls in generated for pattern in cls}
+    pattern_to_expected = {pattern: cls for cls in expected for pattern in cls}
+    intersected_expected = {
+        pattern_to_expected[pattern]
+        for pattern in generated_patterns
+        if pattern in pattern_to_expected
+    }
+    exact_on_intersected_universe = generated == intersected_expected
     lines.append(f"exact class-set match: {ok}")
+    lines.append(f"generated pattern count: {len(generated_patterns)}")
+    touched_patterns = set().union(*intersected_expected) if intersected_expected else set()
+    lines.append(f"wilf.txt patterns touched by generated classes: {len(touched_patterns)}")
+    lines.append(f"wilf.txt classes touched by generated classes: {len(intersected_expected)}")
+    lines.append(f"exact match on generated/intersected pattern universe: {exact_on_intersected_universe}")
     if not ok:
         missing = expected - generated
         extra = generated - expected
+        if exact_on_intersected_universe and missing and not extra:
+            lines.append(
+                "note: generated classes are an exact subset of wilf.txt classes on the "
+                "patterns present in the generated D8-closed universe; the mismatch comes "
+                "from additional wilf.txt classes outside that universe."
+            )
         if missing:
             lines.append("classes in wilf.txt but not generated:")
             for cls in sorted(missing, key=lambda c: (len(c), sorted(c))):
@@ -298,6 +317,15 @@ def main_args(argv: list[str] | None = None) -> int:
         type=Path,
         help="optional wilf.txt file to compare against after generation",
     )
+    parser.add_argument(
+        "--allow-intersected-wilf-match",
+        action="store_true",
+        help=(
+            "when --check-wilf is used, return success if generated classes match "
+            "the wilf.txt classes touched by the generated pattern universe, even if "
+            "wilf.txt contains additional classes outside that universe"
+        ),
+    )
     args = parser.parse_args(argv)
 
     k, shape_classes, _ = load_shape_classes(args.input)
@@ -326,7 +354,12 @@ def main_args(argv: list[str] | None = None) -> int:
     print(f"input shape-Wilf classes: {report['input_shape_wilf_class_count']}")
     print(f"input patterns: {report['input_pattern_count']}")
     print(f"completed patterns: {report['completed_pattern_count']}")
-    print(f"D8-added singleton patterns: {', '.join(report['d8_added_singletons']) or '(none)'}")
+    added = report["d8_added_singletons"]
+    if len(added) <= 20:
+        added_text = ", ".join(added) or "(none)"
+    else:
+        added_text = f"{len(added)} patterns; see JSON/text output for full list"
+    print(f"D8-added singleton patterns: {added_text}")
     print(f"generated classes: {report['generated_class_count']}")
     print(f"generated non-singleton classes: {report['generated_non_singleton_count']}")
     print(f"size distribution: {report['generated_size_distribution']}")
@@ -340,7 +373,12 @@ def main_args(argv: list[str] | None = None) -> int:
         for line in lines:
             print(line)
         if not ok:
-            return 1
+            exact_on_intersected = any(
+                line == "exact match on generated/intersected pattern universe: True"
+                for line in lines
+            )
+            if not (args.allow_intersected_wilf_match and exact_on_intersected):
+                return 1
     return 0
 
 
