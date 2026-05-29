@@ -13,6 +13,12 @@ python3 generate_wilf_from_shape_d8.py
 
 The input files `data/reverse_k*.json` use the legacy key `record_classes`; in this project those entries are interpreted as shape-Wilf classes.
 
+A helper script can regenerate these reverse files from the current combinatorial recipe:
+
+```bash
+python3 generate_reverse_json.py
+```
+
 ## Mathematical interpretation
 
 For a fixed length `k`:
@@ -39,11 +45,48 @@ The `data/` directory contains:
 - `reverse_k6.json`
 - `reverse_k7.json`
 - `reverse_k8.json`
+- `reverse_k9.json`
 - `wilf.txt`
 
 The smaller `reverse_k3.json` and `reverse_k4.json` files are intentionally not bundled. The repository starts its bundled reverse-data examples at `k=5`.
 
 The `reverse_k*.json` files contain shape-Wilf classes for the corresponding `S_k` datasets. Some files may omit patterns whose shape-Wilf classes are singletons. By default, the script only completes the input universe under D8 by adding missing D8 images as singleton shape-Wilf classes.
+
+The reverse files are generated from two non-singleton families:
+
+1. the nonempty new layers
+   `C_t^pi = (G_{k-t} ⊕ pi) \ setminus union_{s<t,tau in S_s} (G_{k-s} ⊕ tau)`,
+   where `G_m = {j(j-1)...1(j+1)...m : 1 <= j <= m}`;
+2. the exceptional pairs `{231 ⊕ pi, 312 ⊕ pi}` for `pi in S_{k-3}`.
+
+The remaining permutations can be included as singleton classes. The bundled `reverse_k5.json`, `reverse_k6.json`, `reverse_k8.json`, and `reverse_k9.json` use singleton mode `omit-d8-seed`, which includes residual singleton classes except the legacy D8-completion seed `23...k1`. The bundled `reverse_k7.json` is sparse: it uses singleton mode `none` and contains only non-singleton classes.
+
+To regenerate and compare the bundled S5 file semantically:
+
+```bash
+python3 generate_reverse_json.py 5 \
+  --output /tmp/reverse_k5.generated.json \
+  --compare-existing data/reverse_k5.json
+```
+
+To regenerate the sparse bundled S7 file:
+
+```bash
+python3 generate_reverse_json.py 7 \
+  --output /tmp/reverse_k7.sparse.generated.json \
+  --singletons none \
+  --compare-existing data/reverse_k7.json
+```
+
+To generate a full-style file for any length, set `n` to the desired value and use the default singleton policy:
+
+```bash
+n=9
+
+python3 generate_reverse_json.py "$n" \
+  --output "data/reverse_k${n}.json" \
+  --singletons omit-d8-seed
+```
 
 If you want all ordinary Wilf classes from a partial shape-Wilf dataset, use `--complete-all-permutations`. This adds every missing permutation in `S_k` as a singleton vertex before taking D8 components. For `reverse_k7.json`, this is necessary to recover all classes in `wilf.txt`; without it, the script only recovers the 74 Wilf classes touched by the partial input universe.
 
@@ -74,9 +117,9 @@ Expected S7 all-permutation summary:
 
 ```text
 input shape-Wilf classes: 144
-input patterns: 322
+input patterns: 321
 completed patterns: 5040
-D8-added singleton patterns: 4718 patterns; see JSON/text output for full list
+D8-added singleton patterns: 4719 patterns; see JSON/text output for full list
 generated classes: 595
 generated non-singleton classes: 595
 size distribution: {2: 5, 4: 60, 8: 472, 12: 3, 16: 46, 24: 7, 32: 1, 42: 1}
@@ -104,13 +147,28 @@ generated non-singleton classes: 4755
 size distribution: {2: 29, 4: 260, 8: 4094, 12: 10, 16: 309, 18: 1, 20: 1, 24: 39, 32: 9, 40: 1, 48: 1, 56: 1}
 ```
 
+For any length, set `n` to the desired value, first generate `data/reverse_k${n}.json`, then generate the D8 closure outputs:
+
+```bash
+n=9
+
+python3 generate_reverse_json.py "$n" \
+  --output "data/reverse_k${n}.json" \
+  --singletons omit-d8-seed
+
+python3 generate_wilf_from_shape_d8.py \
+  --input "data/reverse_k${n}.json" \
+  --output-json "outputs/generated_wilf_k${n}_from_shape_d8.json" \
+  --output-txt "outputs/generated_wilf_k${n}_from_shape_d8.txt"
+```
+
 ## Reproduce all bundled examples
 
 Default D8-completion mode:
 
 ```bash
 mkdir -p outputs
-for k in 5 6 7 8; do
+for k in 5 6 7 8 9; do
   python3 generate_wilf_from_shape_d8.py \
     --input data/reverse_k${k}.json \
     --output-json outputs/generated_wilf_k${k}_from_shape_d8.json \

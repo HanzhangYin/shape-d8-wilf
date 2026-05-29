@@ -25,7 +25,13 @@ class GenerationTests(unittest.TestCase):
         bundled = sorted(path.name for path in DATA.glob("reverse_k*.json"))
         self.assertEqual(
             bundled,
-            ["reverse_k5.json", "reverse_k6.json", "reverse_k7.json", "reverse_k8.json"],
+            [
+                "reverse_k5.json",
+                "reverse_k6.json",
+                "reverse_k7.json",
+                "reverse_k8.json",
+                "reverse_k9.json",
+            ],
         )
 
     def _generate_report(self, k_value, *, complete_all_permutations=False):
