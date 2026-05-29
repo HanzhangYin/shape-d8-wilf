@@ -64,28 +64,19 @@ The remaining permutations can be included as singleton classes. The bundled `re
 To regenerate and compare the bundled S5 file semantically:
 
 ```bash
-python3 generate_reverse_json.py 5 \
-  --output /tmp/reverse_k5.generated.json \
-  --compare-existing data/reverse_k5.json
+python3 generate_reverse_json.py 5 --output /tmp/reverse_k5.generated.json --compare-existing data/reverse_k5.json
 ```
 
 To regenerate the sparse bundled S7 file:
 
 ```bash
-python3 generate_reverse_json.py 7 \
-  --output /tmp/reverse_k7.sparse.generated.json \
-  --singletons none \
-  --compare-existing data/reverse_k7.json
+python3 generate_reverse_json.py 7 --output /tmp/reverse_k7.sparse.generated.json --singletons none --compare-existing data/reverse_k7.json
 ```
 
 To generate a full-style file for any length, set `n` to the desired value and use the default singleton policy:
 
 ```bash
-n=9
-
-python3 generate_reverse_json.py "$n" \
-  --output "data/reverse_k${n}.json" \
-  --singletons omit-d8-seed
+n=9; python3 generate_reverse_json.py "$n" --output "data/reverse_k${n}.json" --singletons omit-d8-seed
 ```
 
 If you want all ordinary Wilf classes from a partial shape-Wilf dataset, use `--complete-all-permutations`. This adds every missing permutation in `S_k` as a singleton vertex before taking D8 components. For `reverse_k7.json`, this is necessary to recover all classes in `wilf.txt`; without it, the script only recovers the 74 Wilf classes touched by the partial input universe.
@@ -95,22 +86,13 @@ If you want all ordinary Wilf classes from a partial shape-Wilf dataset, use `--
 Generate the S5 closure and compare against the included ordinary Wilf table:
 
 ```bash
-python3 generate_wilf_from_shape_d8.py \
-  --input data/reverse_k5.json \
-  --output-json outputs/generated_wilf_k5_from_shape_d8.json \
-  --output-txt outputs/generated_wilf_k5_from_shape_d8.txt \
-  --check-wilf data/wilf.txt
+python3 generate_wilf_from_shape_d8.py --input data/reverse_k5.json --output-json outputs/generated_wilf_k5_from_shape_d8.json --output-txt outputs/generated_wilf_k5_from_shape_d8.txt --check-wilf data/wilf.txt
 ```
 
 Generate all S7 ordinary Wilf classes from the partial S7 shape data:
 
 ```bash
-python3 generate_wilf_from_shape_d8.py \
-  --input data/reverse_k7.json \
-  --output-json outputs/generated_wilf_k7_from_shape_d8.json \
-  --output-txt outputs/generated_wilf_k7_from_shape_d8.txt \
-  --complete-all-permutations \
-  --check-wilf data/wilf.txt
+python3 generate_wilf_from_shape_d8.py --input data/reverse_k7.json --output-json outputs/generated_wilf_k7_from_shape_d8.json --output-txt outputs/generated_wilf_k7_from_shape_d8.txt --complete-all-permutations --check-wilf data/wilf.txt
 ```
 
 Expected S7 all-permutation summary:
@@ -129,10 +111,7 @@ exact class-set match: True
 Generate the S8 closure:
 
 ```bash
-python3 generate_wilf_from_shape_d8.py \
-  --input data/reverse_k8.json \
-  --output-json outputs/generated_wilf_k8_from_shape_d8.json \
-  --output-txt outputs/generated_wilf_k8_from_shape_d8.txt
+python3 generate_wilf_from_shape_d8.py --input data/reverse_k8.json --output-json outputs/generated_wilf_k8_from_shape_d8.json --output-txt outputs/generated_wilf_k8_from_shape_d8.txt
 ```
 
 Expected S8 summary:
@@ -150,16 +129,7 @@ size distribution: {2: 29, 4: 260, 8: 4094, 12: 10, 16: 309, 18: 1, 20: 1, 24: 3
 For any length, set `n` to the desired value, first generate `data/reverse_k${n}.json`, then generate the D8 closure outputs:
 
 ```bash
-n=9
-
-python3 generate_reverse_json.py "$n" \
-  --output "data/reverse_k${n}.json" \
-  --singletons omit-d8-seed
-
-python3 generate_wilf_from_shape_d8.py \
-  --input "data/reverse_k${n}.json" \
-  --output-json "outputs/generated_wilf_k${n}_from_shape_d8.json" \
-  --output-txt "outputs/generated_wilf_k${n}_from_shape_d8.txt"
+n=9; python3 generate_reverse_json.py "$n" --output "data/reverse_k${n}.json" --singletons omit-d8-seed; python3 generate_wilf_from_shape_d8.py --input "data/reverse_k${n}.json" --output-json "outputs/generated_wilf_k${n}_from_shape_d8.json" --output-txt "outputs/generated_wilf_k${n}_from_shape_d8.txt"
 ```
 
 ## Reproduce all bundled examples
@@ -167,34 +137,19 @@ python3 generate_wilf_from_shape_d8.py \
 Default D8-completion mode:
 
 ```bash
-mkdir -p outputs
-for k in 5 6 7 8 9; do
-  python3 generate_wilf_from_shape_d8.py \
-    --input data/reverse_k${k}.json \
-    --output-json outputs/generated_wilf_k${k}_from_shape_d8.json \
-    --output-txt outputs/generated_wilf_k${k}_from_shape_d8.txt
-done
+mkdir -p outputs; for k in 5 6 7 8 9; do python3 generate_wilf_from_shape_d8.py --input data/reverse_k${k}.json --output-json outputs/generated_wilf_k${k}_from_shape_d8.json --output-txt outputs/generated_wilf_k${k}_from_shape_d8.txt; done
 ```
 
 All-permutation completion mode, useful for partial datasets such as `reverse_k7.json`:
 
 ```bash
-python3 generate_wilf_from_shape_d8.py \
-  --input data/reverse_k7.json \
-  --output-json outputs/generated_wilf_k7_all_from_shape_d8.json \
-  --output-txt outputs/generated_wilf_k7_all_from_shape_d8.txt \
-  --complete-all-permutations \
-  --check-wilf data/wilf.txt
+python3 generate_wilf_from_shape_d8.py --input data/reverse_k7.json --output-json outputs/generated_wilf_k7_all_from_shape_d8.json --output-txt outputs/generated_wilf_k7_all_from_shape_d8.txt --complete-all-permutations --check-wilf data/wilf.txt
 ```
 
 For the lengths present in `data/wilf.txt`, you can also run checks, for example:
 
 ```bash
-python3 generate_wilf_from_shape_d8.py \
-  --input data/reverse_k5.json \
-  --output-json outputs/generated_wilf_k5_from_shape_d8.json \
-  --output-txt outputs/generated_wilf_k5_from_shape_d8.txt \
-  --check-wilf data/wilf.txt
+python3 generate_wilf_from_shape_d8.py --input data/reverse_k5.json --output-json outputs/generated_wilf_k5_from_shape_d8.json --output-txt outputs/generated_wilf_k5_from_shape_d8.txt --check-wilf data/wilf.txt
 ```
 
 ## Development
