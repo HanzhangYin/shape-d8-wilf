@@ -17,6 +17,12 @@ def class_sets(payload):
 
 
 class ReverseJsonGeneratorTests(unittest.TestCase):
+    def test_format_pattern_is_unambiguous_for_k10(self):
+        pattern = (9, 8, 7, 6, 5, 4, 3, 2, 1, 10)
+        text = grj.format_pattern(pattern)
+        self.assertEqual(text, "9 8 7 6 5 4 3 2 1 10")
+        self.assertEqual(grj.parse_pattern(text), pattern)
+
     def test_k5_generation_matches_existing_reverse_file_semantically(self):
         existing = json.loads((DATA / "reverse_k5.json").read_text())
         generated = grj.build_reverse_data(

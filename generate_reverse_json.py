@@ -32,11 +32,24 @@ def direct_sum(left: Pattern, right: Pattern) -> Pattern:
 
 
 def format_pattern(pattern: Pattern) -> str:
+    """Format a permutation pattern unambiguously.
+
+    For lengths up to 9, keep the historical compact digit string format
+    such as ``2413``.  For lengths 10 and above, use spaces so entries like
+    10 are not confused with the two digits 1 and 0.
+    """
+    if max(pattern, default=0) >= 10:
+        return " ".join(str(x) for x in pattern)
     return "".join(str(x) for x in pattern)
 
 
 def parse_pattern(text: str) -> Pattern:
-    return tuple(int(ch) for ch in text.strip())
+    text = text.strip()
+    if not text:
+        raise ValueError("empty pattern")
+    if any(ch in text for ch in ", "):
+        return tuple(int(x) for x in text.replace(",", " ").split())
+    return tuple(int(ch) for ch in text)
 
 
 def generating_set_g(m: int) -> list[Pattern]:

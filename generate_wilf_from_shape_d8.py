@@ -32,6 +32,9 @@ def parse_pattern(text: str) -> tuple[int, ...]:
 
 
 def format_pattern(pattern: Iterable[int]) -> str:
+    pattern = tuple(pattern)
+    if max(pattern, default=0) >= 10:
+        return " ".join(str(x) for x in pattern)
     return "".join(str(x) for x in pattern)
 
 

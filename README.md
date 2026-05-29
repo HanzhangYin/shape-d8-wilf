@@ -50,7 +50,7 @@ The `data/` directory contains:
 
 The smaller `reverse_k3.json` and `reverse_k4.json` files are intentionally not bundled. The repository starts its bundled reverse-data examples at `k=5`.
 
-The `reverse_k*.json` files contain shape-Wilf classes for the corresponding `S_k` datasets. Some files may omit patterns whose shape-Wilf classes are singletons. By default, the script only completes the input universe under D8 by adding missing D8 images as singleton shape-Wilf classes.
+The `reverse_k*.json` files contain shape-Wilf classes for the corresponding `S_k` datasets. Some files may omit patterns whose shape-Wilf classes are singletons. By default, the script only completes the input universe under D8 by adding missing D8 images as singleton shape-Wilf classes. For `k <= 9`, patterns are written in the historical compact form such as `2413`; for `k >= 10`, patterns are written with spaces, such as `9 8 7 6 5 4 3 2 1 10`, so the entry `10` is unambiguous.
 
 The reverse files are generated from two non-singleton families:
 
@@ -129,7 +129,7 @@ size distribution: {2: 29, 4: 260, 8: 4094, 12: 10, 16: 309, 18: 1, 20: 1, 24: 3
 For any length, set `n` to the desired value, first generate `data/reverse_k${n}.json`, then generate the D8 closure outputs:
 
 ```bash
-n=9; python3 generate_reverse_json.py "$n" --output "data/reverse_k${n}.json" --singletons omit-d8-seed; python3 generate_wilf_from_shape_d8.py --input "data/reverse_k${n}.json" --output-json "outputs/generated_wilf_k${n}_from_shape_d8.json" --output-txt "outputs/generated_wilf_k${n}_from_shape_d8.txt"
+n=9; python3 generate_reverse_json.py "$n" --output "data/reverse_k${n}.json" --singletons omit-d8-seed && python3 generate_wilf_from_shape_d8.py --input "data/reverse_k${n}.json" --output-json "outputs/generated_wilf_k${n}_from_shape_d8.json" --output-txt "outputs/generated_wilf_k${n}_from_shape_d8.txt"
 ```
 
 ## Reproduce all bundled examples

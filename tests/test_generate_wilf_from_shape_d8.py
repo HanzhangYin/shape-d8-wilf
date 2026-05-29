@@ -16,6 +16,12 @@ class D8OperationTests(unittest.TestCase):
         orbit = {d8.format_pattern(p) for p in d8.d8_orbit((1, 2, 3))}
         self.assertEqual(orbit, {"123", "321"})
 
+    def test_format_and_parse_pattern_are_unambiguous_for_k10(self):
+        pattern = (9, 8, 7, 6, 5, 4, 3, 2, 1, 10)
+        text = d8.format_pattern(pattern)
+        self.assertEqual(text, "9 8 7 6 5 4 3 2 1 10")
+        self.assertEqual(d8.parse_pattern(text), pattern)
+
     def test_inverse(self):
         self.assertEqual(d8.inverse_pattern((2, 3, 1)), (3, 1, 2))
 
@@ -23,16 +29,16 @@ class D8OperationTests(unittest.TestCase):
 class GenerationTests(unittest.TestCase):
     def test_bundled_reverse_data_starts_at_k5(self):
         bundled = sorted(path.name for path in DATA.glob("reverse_k*.json"))
-        self.assertEqual(
-            bundled,
-            [
-                "reverse_k5.json",
-                "reverse_k6.json",
-                "reverse_k7.json",
-                "reverse_k8.json",
-                "reverse_k9.json",
-            ],
-        )
+        self.assertNotIn("reverse_k3.json", bundled)
+        self.assertNotIn("reverse_k4.json", bundled)
+        for name in [
+            "reverse_k5.json",
+            "reverse_k6.json",
+            "reverse_k7.json",
+            "reverse_k8.json",
+            "reverse_k9.json",
+        ]:
+            self.assertIn(name, bundled)
 
     def _generate_report(self, k_value, *, complete_all_permutations=False):
         source = DATA / f"reverse_k{k_value}.json"
